@@ -33,7 +33,7 @@
     </profiles>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <doctools.version>1.3.0-SNAPSHOT</doctools.version>
+        <doctools.version>1.3.0</doctools.version>
     </properties>
 
     <dependencies>
@@ -339,6 +339,28 @@
                                 <copy todir="target/docbkx/webhelp/extensions/OS-KSEC2/OS-KSEC2-admin-devguide/content/">
                                     <fileset dir="target/docbkx/pdf/extensions/OS-KSEC2">
                                         <include name="**/OS-KSEC2-admin-devguide.pdf"/>
+                                    </fileset>
+                                </copy>
+                            </postProcess>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>OS-KSEC2-service</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                            <goal>generate-webhelp</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <includes>extensions/OS-KSEC2/OS-KSEC2-service-devguide.xml</includes>
+                            <trimWadlUriCount>1</trimWadlUriCount>
+                            <pdfUrl>OS-KSEC2-service-devguide.pdf</pdfUrl>
+                            <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/auth/OS-KSEC2-service-devguide/content</canonicalUrlBase>
+                            <chunkSectionDepth>0</chunkSectionDepth>
+                            <postProcess>
+                                <copy todir="target/docbkx/webhelp/extensions/OS-KSEC2/OS-KSEC2-service-devguide/content/">
+                                    <fileset dir="target/docbkx/pdf/extensions/OS-KSEC2">
+                                        <include name="**/OS-KSEC2-service-devguide.pdf"/>
                                     </fileset>
                                 </copy>
                             </postProcess>
