@@ -146,7 +146,7 @@
                   <title>Authenticate</title>
                   <para>This extension allows authentication calls to accept new type of credentials <parameter>apikeyCredentials</parameter>.
                       These are additional type of credentials defined to support rackspace style authentication.
-                      The usage of <parameter>apikeyCredentials</parameter> on a existing call to authenticate is illustrated below 
+                      The usage of <parameter>apikeyCredentials</parameter> on a existing call to authenticate is illustrated below.
                   </para>
                   <informaltable rules="all">
                       &URI_REFHEAD;

@@ -142,7 +142,7 @@
               <title>s3Credentials</title>
               <para>This extension allows authentication calls to accept new type of credentials <parameter>s3Credentials</parameter>.
                   These are additional type of credentials defined to support Amazon's S3 style Authentication.
-                  Examples of <parameter>s3Credentials</parameter> are illustrated below
+                  Examples of <parameter>s3Credentials</parameter> are illustrated below.
               </para>
               <example>
                   <title>s3Credentials XML</title>
