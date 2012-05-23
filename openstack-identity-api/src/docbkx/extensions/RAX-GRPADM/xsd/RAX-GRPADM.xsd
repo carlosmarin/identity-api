@@ -18,8 +18,6 @@
     <import namespace="http://docs.openstack.org/identity/api/v2.0"
             schemaLocation="../../common/xsd/api.xsd"/>
 
-    <element name="group" type="RAX-KSGRP:Group"/>
-
     <complexType name="GroupForCreate">
         <complexContent>
             <restriction base="RAX-KSGRP:Group">
