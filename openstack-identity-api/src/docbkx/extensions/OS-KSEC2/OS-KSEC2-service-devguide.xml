@@ -33,17 +33,10 @@
         <td colspan="4">Description</td>
         </tr>
         </thead>'>
-        <!ENTITY NAMESPACE "http://docs.openstack.org/identity/api/ext/OS-KSEC2/v1.0">
-        <!ENTITY CURRENTGUIDE "http://docs.openstack.org/api/openstack-identity-service/2.0/identity-dev-guide-2.0.pdf">
-        <!ENTITY EXTENSIONXSD "http://docs.openstack.org/api/openstack-identity/ext/os/common/xsd/OS-KSEC2-credentials.xsd">
-        <!ENTITY EC2CREDENTIALSREQUESTXML "http://docs.openstack.org/api/openstack-identity/ext/os/common/samples/auth_credentials-OS-KSEC2.xml">
-        <!ENTITY EC2CREDENTIALSREQUESTJSON "http://docs.openstack.org/api/openstack-identity/ext/os/common/samples/auth_credentials-OS-KSEC2.json">
-        <!ENTITY EC2CREDENTIALSRESPONSEXML "http://docs.openstack.org/api/openstack-identity/ext/os/common/samples/auth.xml">
-        <!ENTITY EC2CREDENTIALSRESPONSEJSON "http://docs.openstack.org/api/openstack-identity/ext/os/common/samples/auth.json">
-        <!ENTITY EXTENSIONQUERYRESPONSEXML "http://docs.openstack.org/api/openstack-identity/ext/os/contrib/extensions/service/osec2/extension.xml">
-        <!ENTITY EXTENSIONQUERYRESPONSEJSON "http://docs.openstack.org/api/openstack-identity/ext/os/contrib/extensions/service/osec2/extension.json">
-        
-        
+        <!ENTITY EC2CREDENTIALSREQUESTXML "samples/auth_credentials-OS-KSEC2.xml">
+        <!ENTITY EC2CREDENTIALSREQUESTJSON "samples/auth_credentials-OS-KSEC2.json">
+        <!ENTITY EC2CREDENTIALSRESPONSEXML "../../common/samples/auth.xml">
+        <!ENTITY EC2CREDENTIALSRESPONSEJSON "../../common/samples/auth.json">
 ]>
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -52,7 +45,9 @@
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
       version="5.0" status="draft" xml:id="book-0001">
-    <title>OpenStack EC2 authentication Extension (Service Operations)</title>
+    <?rax subtitle.font.size="12px"?>
+    <title>OpenStack Identity EC2 authentication Extension (Service Operations)</title>
+    <titleabbrev>OS-KSEC2 (Admin)</titleabbrev>
   <info>
       <author>
           <personname>
@@ -69,7 +64,7 @@
           <holder>OpenStack</holder>
       </copyright>
       <releaseinfo>EXT v1.0</releaseinfo>
-      <productname>>Keystone - OpenStack Identity</productname>
+      <productname>OpenStack Identity</productname>
     <pubdate>&PUB_DATE;</pubdate>
       <legalnotice role="apache2">
           <annotation>
@@ -84,108 +79,39 @@
           (<abbrev>API</abbrev>).
       </para>
     </abstract>
+    <extension
+        xmlns="http://docs.openstack.org/common/api/v1.0" xmlns:atom="http://www.w3.org/2005/Atom"
+        name="OpenStack EC2 authentication Extension"
+        namespace="http://docs.openstack.org/identity/api/ext/OS-KSEC2/v1.0"
+        alias="OS-KSEC2-service"
+        updated="2011-08-25T09:50:00-00:00">
+
+        <description>
+            Adds the capability to support EC2 style authentication.
+        </description>
+
+        <atom:link rel="describedby"
+                   type="application/pdf"
+                   href="https://github.com/openstack/keystone/raw/master/keystone/content/service/OS-KSEC2-service-devguide.pdf"/>
+        <atom:link rel="describedby"
+                   type="application/xml"
+                   href="http://docs.openstack.org/api/openstack-identity/ext/os/common/xsd/OS-KSEC2-credentials.xsd"/>
+    </extension>
+    <revhistory>
+        <revision>
+            <date>2011-08-26</date>
+            <revdescription>
+                <itemizedlist spacing="compact">
+                    <listitem>
+                        <para>
+                            Initial release.
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </revdescription>
+        </revision>
+    </revhistory>
   </info>
-    <chapter xml:id="chapter-0000">
-      <title>About This Extension</title>
-      <variablelist spacing="compact">
-          <varlistentry>
-              <term>Name</term>
-              <listitem>
-                  <para>OpenStack EC2 authentication Extension</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Namespace</term>
-              <listitem>
-                  <para>&NAMESPACE;</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Alias</term>
-              <listitem>
-                  <para>&ALIAS;</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Dependencies</term>
-              <listitem>
-                  <para>Keystone - OpenStack Identity</para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (PDF)</term>
-              <listitem>
-                  <para>
-                        <link
-                            xlink:href="&CURRENTGUIDE;"
-                            >
-                            &CURRENTGUIDE;
-                        </link>
-                    </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (WADL)</term>
-              <listitem>
-                  <para>
-                      None, the extension makes no modification to the API WADL.
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Doc Link (XSD)</term>
-              <listitem>
-                  <para>
-                      <link xlink:href="&EXTENSIONXSD;">
-                          &EXTENSIONXSD;
-                      </link>
-                  </para>
-              </listitem>
-          </varlistentry>
-          <varlistentry>
-              <term>Short Description</term>
-              <listitem>
-                  <para>
-                      OpenStack EC2 authentication Service Extension to Keystone v2.0 API adds the capability to support EC2 style authentication..
-                  </para>
-              </listitem>
-          </varlistentry>
-      </variablelist>
-      <?hard-pagebreak?>
-      <example>
-          <title>Extension Query Response: XML</title>
-          <programlisting language="xml"><xi:include href="&EXTENSIONQUERYRESPONSEXML;" parse="text"/></programlisting>
-      </example>
-      <example>
-          <title>Extension Query Response: JSON</title>
-          <programlisting language="javascript"><xi:include href="&EXTENSIONQUERYRESPONSEJSON;" parse="text"/></programlisting>
-      </example>
-      <section xml:id="Doc-Change-0001">
-          <title>Document Change History</title>
-          <informaltable rules='all'>
-              <thead>
-                  <tr>
-                      <td align="center" colspan="1">Revision Date</td>
-                      <td align="center" colspan="4">Summary of Changes</td>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td colspan="1" align="center">Aug. 24, 2011</td>
-                      <td colspan="4">
-                          <itemizedlist spacing="compact">
-                              <listitem>
-                                  <para>
-                                      Initial release.
-                                  </para>
-                              </listitem>
-                          </itemizedlist>
-                      </td>
-                  </tr>
-              </tbody>
-          </informaltable>
-      </section>
-  </chapter>
   <chapter xml:id="chapter-0001">
       <title>Summary of Changes</title>
       <para> The OpenStack EC2 authentication Service Extension allows
@@ -258,7 +184,7 @@
                   </example>
                   <example>
                       <title>XML Auth Response</title>
-                      <programlisting language="xml"><xi:include href="samples/auth.xml" parse="text"/></programlisting>
+                      <programlisting language="xml"><xi:include href="&EC2CREDENTIALSRESPONSEXML;" parse="text"/></programlisting>
                   </example>
                  <example>
                  <title>JSON Auth Response</title>
