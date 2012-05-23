@@ -34,7 +34,7 @@
         </tr>
         </thead>'>
         <!ENTITY NAMESPACE "http://docs.rackspace.com/identity/api/ext/OS-KSVALIDATE/v1.0">
-        <!ENTITY CURRENTGUIDE "http://docs.rackspace.com/api">
+        <!ENTITY CURRENTGUIDE "http://docs.openstack.org">
 
 ]>
 <book xmlns="http://docbook.org/ns/docbook"

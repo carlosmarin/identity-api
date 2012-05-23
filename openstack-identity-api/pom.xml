@@ -144,6 +144,29 @@
                     </execution>
 
                     <execution>
+                        <id>OS-KSS3</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                            <goal>generate-webhelp</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <includes>extensions/OS-KSS3/OS-KSS3-admin-devguide.xml</includes>
+                            <trimWadlUriCount>1</trimWadlUriCount>
+                            <pdfUrl>OS-KSS3-admin-devguide.pdf</pdfUrl>
+                            <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/auth/OS-KSS3/content</canonicalUrlBase>
+                            <chunkSectionDepth>0</chunkSectionDepth>
+                            <postProcess>
+                                <copy todir="target/docbkx/webhelp/extensions/OS-KSS3/OS-KSS3-admin-devguide/content/">
+                                    <fileset dir="target/docbkx/pdf/extensions/OS-KSS3">
+                                        <include name="**/OS-KSS3-admin-devguide.pdf"/>
+                                    </fileset>
+                                </copy>
+                            </postProcess>
+                        </configuration>
+                    </execution>
+
+                    <execution>
                         <id>OS-KSADM</id>
                         <goals>
                             <goal>generate-pdf</goal>
