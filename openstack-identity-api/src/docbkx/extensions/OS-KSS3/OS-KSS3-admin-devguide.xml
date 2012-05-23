@@ -33,7 +33,7 @@
         <td colspan="4">Description</td>
         </tr>
         </thead>'>
-        <!ENTITY NAMESPACE "http://docs.rackspace.com/identity/api/ext/OS-KSEC2/v1.0">
+        <!ENTITY NAMESPACE "http://docs.rackspace.com/identity/api/ext/OS-KSS3/v1.0">
         <!ENTITY CURRENTGUIDE "http://docs.openstack.org">
 
         <!ENTITY S3CREDENTIALSREQUESTXML "samples/s3Credentials.xml">
@@ -81,7 +81,7 @@
     </othercredit>
     <extension  xmlns="http://docs.openstack.org/common/api/v1.0"
                 xmlns:atom="http://www.w3.org/2005/Atom"
-                name="OS-KSS3 Extensions" namespace="http://docs.rackspace.com/identity/api/ext/OS-KSEC2/v1.0"
+                name="OS-KSS3 Extensions" namespace="http://docs.rackspace.com/identity/api/ext/OS-KSS3/v1.0"
                 alias="OS-KSS3"
                 updated="2011-08-14T13:25:27-06:00">
                 <description>
@@ -118,7 +118,7 @@
   <chapter xml:id="chapter-0001">
       <title>Summary of Changes</title>
       <para>
-          OS-KSS3 extension allows a Token to be encrypted and passed in the 'X-Subject-Token' header for validation, rather than in the URI.
+          The OS-KSS3 Extension allows crud/listing operations on <parameter>s3Credentials</parameter>.
       </para>
       <section xml:id="NewHeaders-0001">
           <title>New Headers</title>
@@ -141,7 +141,7 @@
           <section xml:id="NewElementDetail-0001">
               <title>s3Credentials</title>
               <para>This extension allows authentication calls to accept new type of credentials <parameter>s3Credentials</parameter>.
-                  These are additional type of credentials defined to support rackspace style authentication.
+                  These are additional type of credentials defined to support Amazon's S3 style Authentication.
                   Examples of <parameter>s3Credentials</parameter> are illustrated below
               </para>
               <example>
