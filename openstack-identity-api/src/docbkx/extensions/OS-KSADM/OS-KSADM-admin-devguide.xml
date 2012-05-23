@@ -117,7 +117,7 @@ format="SVG" scale="60"/>
             xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
             <title>OS-KSADM Admin Extension API (Service Developer Operations)</title>
             <para>Extension operations. </para>
-            
+
             <table rules="all">
                 <caption>Authentication Header</caption>
                 <thead>

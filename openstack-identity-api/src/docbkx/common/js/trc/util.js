@@ -448,7 +448,6 @@ trc.util.net = {
     }
 };
 
-
 //
 // Init code for trc.util.yui...
 //

@@ -11,7 +11,6 @@
 <!ENTITY DELETE '<command xmlns="http://docbook.org/ns/docbook">DELETE</command>'>
 <!ENTITY HEAD    '<command xmlns="http://docbook.org/ns/docbook">HEAD</command>'>
 
-
 <!ENTITY CHECK  '<inlinemediaobject xmlns="http://docbook.org/ns/docbook">
 <imageobject>
 <imagedata fileref="img/Check_mark_23x20_02.svg"

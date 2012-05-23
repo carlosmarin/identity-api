@@ -109,7 +109,7 @@
         </revision>
     </revhistory>
   </info>
-  
+
   <chapter xml:id="chapter-0001">
       <title>Summary of Changes</title>
       <para>
@@ -154,7 +154,7 @@
           xmlns:xlink="http://www.w3.org/1999/xlink"
           xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
           <title>RAX-KSKEY-admin Extension API Operations</title>
-          
+
           <table rules="all">
               <caption>Authentication Header</caption>
               <thead>

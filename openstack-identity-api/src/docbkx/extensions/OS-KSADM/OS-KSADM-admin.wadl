@@ -282,7 +282,6 @@
         &getFaults;
     </method>
 
-
     <method name="POST" id="addUser">
         <doc xml:lang="EN" title="Add user">
             <p xmlns="http://www.w3.org/1999/xhtml">Adds a user.</p>
@@ -697,7 +696,6 @@
         &postPutFaults;
         &getFaults;
     </method>
-
 
     <method name="GET" id="getRole">
         <doc xml:lang="EN" title="Get Role">

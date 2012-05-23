@@ -45,7 +45,7 @@
         <!ENTITY GROUPREQUESTJSON "../../common/samples/auth_credentials.json">
         <!ENTITY GROUPRESPONSEXML "../../common/samples/authwithgroups.xml">
         <!ENTITY GROUPRESPONSEJSON "../../common/samples/authwithgroups.json">
-        
+
 ]>
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xlink="http://www.w3.org/1999/xlink"

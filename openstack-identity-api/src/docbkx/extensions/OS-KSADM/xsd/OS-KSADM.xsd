@@ -48,7 +48,7 @@
             </xsd:documentation>
         </annotation>
     </element>
-    
+
     <element name="service" type="OS-KSADM:Service"  >
         <annotation>
             <xsd:documentation
@@ -60,7 +60,7 @@
             </xsd:documentation>
         </annotation>
     </element>
-    
+
     <element name="extensibleCredentialsType" type="OS-KSADM:ExtensibleCredentialsType">
         <annotation>
             <xsd:documentation
@@ -81,7 +81,7 @@
         <attribute name="description" type="xsd:string"  use="optional"/>
         <anyAttribute namespace="##other" processContents="lax"/>
     </complexType>
-    
+
     <complexType name="ServiceList">
         <sequence>
             <element name="service" type="OS-KSADM:Service" minOccurs="0" maxOccurs="unbounded"/>

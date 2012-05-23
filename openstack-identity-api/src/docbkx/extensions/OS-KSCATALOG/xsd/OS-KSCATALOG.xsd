@@ -21,7 +21,7 @@
 
     <import namespace="http://docs.openstack.org/identity/api/v2.0"
         schemaLocation="../../../common/xsd/api.xsd" />
-    
+
     <element name="endpointTemplates" type="OS-KSCATALOG:EndpointTemplateList">
         <annotation>
             <xsd:documentation
@@ -33,7 +33,7 @@
             </xsd:documentation>
         </annotation>
     </element>
-    
+
     <element name="endpointTemplate" type="OS-KSCATALOG:EndpointTemplate">
         <annotation>
             <xsd:documentation
@@ -174,7 +174,7 @@
         </sequence>
          <anyAttribute namespace="##other" processContents="lax"/>
     </complexType>
-    
+
     <complexType name="EndpointTemplateWithOnlyId">
         <complexContent>
             <restriction base="OS-KSCATALOG:EndpointTemplate">

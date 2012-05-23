@@ -69,7 +69,6 @@
     <!--               All Methods                             -->
     <!--*******************************************************-->
 
-
     <!-- Token Operations -->
     <method name="GET" id="validateToken">
         <doc xml:lang="EN" title="Validate Token">

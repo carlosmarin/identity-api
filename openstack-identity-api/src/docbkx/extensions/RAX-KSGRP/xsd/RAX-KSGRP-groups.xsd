@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../xslt/schema.xslt"?>
 
-
 <schema
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
@@ -20,10 +19,9 @@
 
     <import namespace="http://docs.openstack.org/identity/api/v2.0"
         schemaLocation="../../../common/xsd/api.xsd" />
-    
-    
+
     <element name="groups" type="RAX-KSGRP:Groups"/>
-    
+
     <complexType name="Groups">
         <sequence>
             <element name="group" type="RAX-KSGRP:Group" maxOccurs="100"/>
@@ -31,7 +29,7 @@
         </sequence>
         <anyAttribute namespace="##other" processContents="lax"/>
     </complexType>
-    
+
     <complexType name="Group">
         <sequence>
             <element name="description" type="xsd:string" maxOccurs="1"/>
@@ -50,4 +48,3 @@
         </complexContent>
     </complexType>
 </schema>
-
