@@ -58,7 +58,7 @@
                             Version details.
                         </p>
                     </xsd:documentation>
-                </annotation>               
+                </annotation>
             </element>
             <element vc:minVersion="1.1" ref="atom:link" minOccurs="0" maxOccurs="unbounded" />
             <any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
@@ -157,8 +157,8 @@
                     xml:lang="EN"
                     xmlns="http://www.w3.org/1999/xhtml">
                     <p>
-                        True if the Endpoint Template is enabled (active). 
-                        A Endpoint Template cannot be added if it's disabled or inactive (false). 
+                        True if the Endpoint Template is enabled (active).
+                        A Endpoint Template cannot be added if it's disabled or inactive (false).
                     </p>
                 </xsd:documentation>
             </annotation>
@@ -189,5 +189,5 @@
                  <attribute name="enabled" type="xsd:boolean" use="prohibited"/>
             </restriction>
         </complexContent>
-    </complexType>   
+    </complexType>
 </schema>

@@ -83,7 +83,7 @@
                namespace="http://docs.rackspace.com/identity/api/ext/RAX-KSQA/v1.0"
                alias="RAX-KSQA" updated="2012-01-23T10:40:00-04:00">
         <description>Allows the management of a User's Secret Question and Answer.</description>
-        <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" 
+        <atom:link rel="describedby" type="application/vnd.sun.wadl+xml"
                    href="http://docs.rackspacecloud.com/auth/api/v2.0/RAX-KSQA/RAX-KSQA-admin.wadl"/>
     </extension>
     <revhistory>

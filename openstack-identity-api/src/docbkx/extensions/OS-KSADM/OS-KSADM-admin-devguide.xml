@@ -82,7 +82,7 @@ format="SVG" scale="60"/>
                     alias="OS-KSADM"
                     updated="2011-08-14T13:25:27-06:00">
                     <description>
-                                Openstack extensions to Keystone v2.0 
+                                Openstack extensions to Keystone v2.0
                                 API enabling Admin Operations.
                     </description>
                     <atom:link rel="describedby" type="application/pdf"
@@ -202,7 +202,7 @@ format="SVG" scale="60"/>
                         <wadl:method href="deleteRole"/>
                     </wadl:resource>
                 </wadl:resources>
-            </section>        
+            </section>
             <?hard-pagebreak?>
             <section xml:id="Service_Operations_OS-KSADM">
                 <title>Service Operations</title>
@@ -216,7 +216,7 @@ format="SVG" scale="60"/>
                         <wadl:method href="deleteService"/>
                     </wadl:resource>
                 </wadl:resources>
-            </section>        
+            </section>
         </section>
 
     </chapter>

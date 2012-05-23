@@ -78,7 +78,7 @@ format="SVG" scale="60"/>
         <abstract>
             <para>
                 This document is intended for client developers interested
-                in using the OpenStack EC2 Authentication Service Extension along with the 
+                in using the OpenStack EC2 Authentication Service Extension along with the
                 Keystone - OpenStack Identity
                 (<abbrev>API</abbrev>).
             </para>
@@ -99,7 +99,7 @@ format="SVG" scale="60"/>
                        href="https://github.com/openstack/keystone/raw/master/keystone/content/admin/OS-KSEC2-admin-devguide.pdf"/>
             <atom:link rel="describedby"
                        type="application/vnd.sun.wadl+xml"
-                       href="https://raw.github.com/openstack/keystone/master/keystone/content/admin/OS-KSEC2-admin.wadl"/>                   
+                       href="https://raw.github.com/openstack/keystone/master/keystone/content/admin/OS-KSEC2-admin.wadl"/>
         </extension>
         <revhistory>
             <revision>
@@ -119,7 +119,7 @@ format="SVG" scale="60"/>
     <chapter xml:id="chapter-0001">
         <title>Summary of Changes</title>
         <para>
-            The OpenStack EC2 authentication Extension allows crud/listing operations on <parameter>ec2Credentials</parameter>. 
+            The OpenStack EC2 authentication Extension allows crud/listing operations on <parameter>ec2Credentials</parameter>.
         </para>
         <section xml:id="NewHeaders-0001">
             <title>New Headers</title>
@@ -143,7 +143,7 @@ format="SVG" scale="60"/>
                 <title>ec2Credentials</title>
                 <para>This extension allows authentication calls to accept new type of credentials <parameter>ec2Credentials</parameter>.
                     These are additional type of credentials defined to support ec2 style authentication.
-                    Examples of <parameter>ec2Credentials</parameter> are illustrated below 
+                    Examples of <parameter>ec2Credentials</parameter> are illustrated below
                 </para>
                 <example>
                     <title>ec2Credentials XML</title>
@@ -154,7 +154,7 @@ format="SVG" scale="60"/>
                     <programlisting language="javascript"><xi:include href="&EC2CREDENTIALSEXAMPLEJSON;" parse="text"/></programlisting>
                 </example>
             </section>
-        </section>    
+        </section>
         <section xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
@@ -191,7 +191,7 @@ format="SVG" scale="60"/>
                         <wadl:method href="getUserCredential"/>
                     </wadl:resource>
                 </wadl:resources>
-            </section>    
+            </section>
         </section>
     </chapter>
 </book>

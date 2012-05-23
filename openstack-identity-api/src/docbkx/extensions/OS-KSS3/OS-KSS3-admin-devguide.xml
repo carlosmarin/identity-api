@@ -89,13 +89,13 @@
                 </description>
                 <atom:link rel="describedby" type="application/pdf"
                             href="httaw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/OS-KSS3/OS-KSS3-admin-devguide.pdf"/>
-                <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" 
+                <atom:link rel="describedby" type="application/vnd.sun.wadl+xml"
                             href="https://raw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/OS-KSS3/OS-KSS3-admin.wadl"/>
     </extension>
     <abstract>
       <para>
           This document is intended for client developers interested
-          in using the OS-KSS3 Extension (Admin) along with the 
+          in using the OS-KSS3 Extension (Admin) along with the
           Keystone - OpenStack Identity
           (<abbrev>API</abbrev>).
       </para>

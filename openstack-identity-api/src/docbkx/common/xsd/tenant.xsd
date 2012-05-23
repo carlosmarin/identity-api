@@ -39,7 +39,7 @@
               </xsdxt:samples>
             </xsd:appinfo>
         </annotation>
-    </element>  
+    </element>
     <element name="tenants" type="identity:Tenants">
        <annotation>
             <xsd:documentation
@@ -50,7 +50,7 @@
                 </p>
             </xsd:documentation>
         </annotation>
-    </element>  
+    </element>
 
     <!-- Complex Types -->
     <complexType name="Tenants">

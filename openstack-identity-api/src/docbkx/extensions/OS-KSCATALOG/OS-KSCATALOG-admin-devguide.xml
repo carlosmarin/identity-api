@@ -161,7 +161,7 @@ format="SVG" scale="60"/>
                         <wadl:method href="deleteEndpoint"/>
                     </wadl:resource>
                 </wadl:resources>
-            </section>        
+            </section>
         </section>
 
     </chapter>

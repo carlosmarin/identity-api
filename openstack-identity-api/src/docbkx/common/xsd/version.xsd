@@ -261,7 +261,7 @@
             <xs:annotation>
                 <xs:documentation>
                     <html:p>
-                        The ID of a version choice represents the service version's unique 
+                        The ID of a version choice represents the service version's unique
                         identifier. This ID is guaranteed to be unique only among the
                         service version choices outlined in the VersionChoiceList.
                     </html:p>
@@ -302,7 +302,7 @@
         <xs:annotation>
             <xs:documentation>
                 <html:p>
-                    A MediaTypeList outlines a collection of valid media types for a given 
+                    A MediaTypeList outlines a collection of valid media types for a given
                     service version.
                 </html:p>
             </xs:documentation>

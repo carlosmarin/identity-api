@@ -355,7 +355,7 @@ Host: identity.api.openstack.org
         </example>
         <example>
             <title>Versions List Response: JSON</title>
-            <programlisting language="javascript"><xi:include 
+            <programlisting language="javascript"><xi:include
             href="samples/versions.json" parse="text"/></programlisting>
         </example>
         <para>
@@ -603,7 +603,7 @@ Host: identity.api.openstack.org/v1.1/
             <td>badRequest</td>
             <td>400</td>
             <td> &CHECK; </td>
-          </tr>         
+          </tr>
           <tr align="center">
             <td>unauthorized</td>
             <td>401</td>

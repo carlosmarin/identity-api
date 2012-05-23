@@ -442,7 +442,7 @@
             <examples xmlns="http://docs.rackspace.com/api" title="List Roles for User Response">
                 <example href="samples/role.xml" language="xml"/>
                 <example href="samples/role.json" language="javascript"/>
-            </examples>            
+            </examples>
             <p xmlns="http://www.w3.org/1999/xhtml">Get information about a global role that belongs to a user.</p>
         </doc>
         <response status="200 203">

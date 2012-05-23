@@ -72,7 +72,7 @@
     <abstract>
       <para>
           This document is intended for client developers interested
-          in using the Rackspace API Key Authentication Service Extension along with the 
+          in using the Rackspace API Key Authentication Service Extension along with the
           Keystone - OpenStack Identity
           (<abbrev>API</abbrev>).
       </para>
@@ -118,7 +118,7 @@
   <chapter xml:id="chapter-0001">
       <title>Summary of Changes</title>
       <para>
-          The Rackspace API Key Authentication Service Extension allows authenticate call to happen using apikeyCredentials. 
+          The Rackspace API Key Authentication Service Extension allows authenticate call to happen using apikeyCredentials.
       </para>
       <section xml:id="NewHeaders-0001">
           <title>New Headers</title>
@@ -140,7 +140,7 @@
           <title>New Element</title>
           <section xml:id="RackExt-0001">
               <title>
-                  Rackspace extensions to Keystone v2.0 API enabling API Key authentication. 
+                  Rackspace extensions to Keystone v2.0 API enabling API Key authentication.
               </title>
               <section xml:id="Authenticate-d1e1166">
                   <title>Authenticate</title>
@@ -163,11 +163,11 @@
                       (<errorcode>403</errorcode>), badRequest (<errorcode>400</errorcode>), identityFault
                       (<errorcode>500</errorcode>), serviceUnavailable(<errorcode>503</errorcode>)</simpara>
                   <para>
-                      This call will return a token if successful. 
+                      This call will return a token if successful.
                       Clients obtain
                       this token, along with the URL to other service APIs, by first authenticating against the
                       Keystone Service and supplying valid credentials.
-                      This extension provides support for Rackspace Style API Key credentials. 
+                      This extension provides support for Rackspace Style API Key credentials.
                   </para>
                   <para>
                       Client authentication is provided via a ReST interface using the POST method,
