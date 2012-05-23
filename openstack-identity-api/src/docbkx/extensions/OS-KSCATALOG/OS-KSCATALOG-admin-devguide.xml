@@ -43,8 +43,8 @@ format="SVG" scale="60"/>
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:html="http://www.w3.org/1999/xhtml" version="5.0" status="draft"
     xml:id="Keystone-Developer-Guide">
-    <title>OS-KSCATALOG Extension</title>
-    <titleabbrev>Keystone OS-KSCATALOG Extension Document(Admin)</titleabbrev>
+    <title>OpenStack Identity OS-KSCATALOG Extension</title>
+    <titleabbrev>OS-KSCATALOG (Admin)</titleabbrev>
     <info>
         <author>
             <personname>
@@ -61,7 +61,7 @@ format="SVG" scale="60"/>
             <holder>OpenStack</holder>
         </copyright>
         <releaseinfo>API v2.0</releaseinfo>
-        <productname>Keystone - OpenStack OS-KSCATALOG Extension</productname>
+        <productname>OpenStack Identity</productname>
         <pubdate>2011-08-29</pubdate>
         <legalnotice role="apache2">
             <annotation>
@@ -86,22 +86,34 @@ format="SVG" scale="60"/>
                     <atom:link rel="describedby" type="application/vnd.sun.wadl+xml"
                                 href="https://github.com/openstack/keystone/raw/master/keystone/content/admin/OS-KSCATALOG-admin.wadl"/>
         </extension>
-
         <abstract>
             <para>This document includes details on various operations supported by the OS-KSCATALOG extensions on top of core keystone operations. </para>
         </abstract>
+        <revhistory>
+            <revision>
+                <date>2011-09-13</date>
+                <revdescription>
+                    <itemizedlist spacing="compact">
+                        <listitem>
+                            <para>
+                                Initial release.
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </revdescription>
+            </revision>
+        </revhistory>
     </info>
 
     <chapter xml:id="api_operations" role="api-reference">
         <title>Extension Operations</title>
-<!-- 
-<xi:include href="../../common/identity-OS-KSCATALOG-api.xml"/> 
--->
+
         <section xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
             <title>OS-KSCATALOG Admin Extension</title>
-            <para>Extension operations. </para>
+            <para>Extension operations.</para>
+
             <table rules="all">
                 <caption>Authentication Header</caption>
                 <thead>
@@ -119,8 +131,10 @@ format="SVG" scale="60"/>
                     </tr>
                 </tbody>
             </table>
-            <para>The following calls are supported by API OS-KSCATALOG Extension on top of Keystone Admin 2.0:</para>
             
+            <?hard-pagebreak?>
+
+            <para>The following calls are supported by API OS-KSCATALOG Extension on top of Keystone Admin 2.0:</para>
             <section xml:id="Endpoint_Template_Operations_OS-KSCATALOG">
                 <title>Endpoint Template Operations</title>
                 <wadl:resources xmlns:wadl="http://wadl.dev.java.net/2009/02">
@@ -133,9 +147,8 @@ format="SVG" scale="60"/>
                         <wadl:method href="deleteEndpointTemplate"/>
                     </wadl:resource>
                 </wadl:resources>
-            </section>        
-            
-
+            </section>
+            <?hard-pagebreak?>
             <section xml:id="Tenant_Operations_OS-KSCATALOG">
                 <title>Endpoint Operations</title>
                 <wadl:resources xmlns:wadl="http://wadl.dev.java.net/2009/02">

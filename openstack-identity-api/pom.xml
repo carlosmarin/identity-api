@@ -127,12 +127,7 @@
                                         <include name="**/*" />
                                     </fileset>
                                 </copy>
-                                <!--Moves PDF to the needed placement for web site and Google Analytics tracking-->
-<!--
-                                <move failonerror="false"
-                                      file="${basedir}/target/docbkx/pdf/common/identity-dev-guide.pdf"
-                                      tofile="${basedir}/target/docbkx/webhelp/api/openstack-identity-service/2.0/content/identity-dev-guide-2.0.pdf"/>
--->
+                                <!--Copies PDFs to the needed placement for web site and Google Analytics tracking-->
                                 <copy tofile="${basedir}/target/docbkx/webhelp/api/openstack-identity-service/2.0/content/identity-dev-guide-2.0.pdf">
                                     <fileset dir="${basedir}/target/docbkx/pdf/common">
                                         <include name="**/identity-dev-guide*.pdf" />
@@ -291,15 +286,15 @@
                         </goals>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <includes>extensions/RAX-KSQA/RAX-KSQA-admin.xml</includes>
+                            <includes>extensions/RAX-KSQA/RAX-KSQA-admin-devguide.xml</includes>
                             <trimWadlUriCount>1</trimWadlUriCount>
-                            <pdfUrl>RAX-KSQA-admin.pdf</pdfUrl>
+                            <pdfUrl>RAX-KSQA-admin-devguide.pdf</pdfUrl>
                             <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/auth/RAX-KSQA-admin/content</canonicalUrlBase>
                             <chunkSectionDepth>0</chunkSectionDepth>
                             <postProcess>
                                 <copy todir="target/docbkx/webhelp/extensions/RAX-KSQA/RAX-KSQA-admin/content/">
                                     <fileset dir="target/docbkx/pdf/extensions/RAX-KSQA">
-                                        <include name="**/RAX-KSQA-admin.pdf"/>
+                                        <include name="**/RAX-KSQA-admin-devguide.pdf"/>
                                     </fileset>
                                 </copy>
                             </postProcess>

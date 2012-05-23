@@ -65,7 +65,7 @@
 
     <!-- User Credentials-->
     <method name="POST" id="addUserCredential">
-        <doc xml:lang="EN" title="Add user Credential.">
+        <doc xml:lang="EN" title="Add user Credential">
             <p xmlns="http://www.w3.org/1999/xhtml">Adds a credential to a user.</p>
         </doc>
         <request>
@@ -114,31 +114,6 @@
             <representation mediaType="application/json">
             <doc xml:lang="EN">
                <xsdxt:code href="samples/credentialswithapikey.json"/>
-            </doc>
-         </representation>
-        </response>
-        &commonFaults;
-        &getFaults;
-    </method>
-
-    <method name="GET" id="listCredentialsByType">
-        <doc xml:lang="EN" title="List Credentials by type">
-            <p xmlns="http://www.w3.org/1999/xhtml">List credentials by type.</p>
-
-        </doc>
-        <request>
-            <param name="marker" style="query" required="false" type="xsd:string"/>
-            <param name="limit" style="query" required="false" type="xsd:int"/>
-        </request>
-        <response status="200 203">
-            <representation mediaType="application/xml" element="identity:credentials">
-            <doc xml:lang="EN">
-               <xsdxt:code href="samples/credentials.xml"/>
-            </doc>
-         </representation>
-            <representation mediaType="application/json">
-            <doc xml:lang="EN">
-               <xsdxt:code href="samples/credentials.json"/>
             </doc>
          </representation>
         </response>

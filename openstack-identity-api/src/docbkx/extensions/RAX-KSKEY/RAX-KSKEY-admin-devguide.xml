@@ -149,10 +149,12 @@
               </example>
           </section>
       </section>
+
       <section xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
           <title>RAX-KSKEY-admin Extension API Operations</title>
+          
           <table rules="all">
               <caption>Authentication Header</caption>
               <thead>
@@ -170,6 +172,7 @@
                   </tr>
               </tbody>
           </table>
+
           <para>Following operations are the list of operations whose behavior is altered by Rackspace API Key Authentication Extension:</para>
           <section xml:id="User_Operations_RAX_KSKEY">
               <title>User Operations</title>
@@ -179,7 +182,6 @@
                       <wadl:method href="listCredentials"/>
                   </wadl:resource>
                   <wadl:resource href="RAX-KSKEY-admin.wadl#userCredentialsByType">
-                      <wadl:method href="listCredentialsByType"/>
                       <wadl:method href="updateUserCredential"/>
                       <wadl:method href="deleteUserCredential"/>
                       <wadl:method href="getUserCredential"/>
