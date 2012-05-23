@@ -24,8 +24,8 @@
     ">
 
     <grammars>
-        <include href="../common/api.xsd"/>
-        <include href="../common/api-common.xsd"/>
+        <include href="../../common/api.xsd"/>
+        <include href="../../common/api-common.xsd"/>
     </grammars>
 
     <!--*******************************************************-->
@@ -86,10 +86,10 @@
             <p xmlns="http://www.w3.org/1999/xhtml">
                 'X-Subject-Token' is encrypted, but can still be used for
                 caching. This extension will basically decrypt this header and
-                                internally call Keystone's normal validation, passing along all
-                                headers and query parameters. It should therefore support
-                                all exsting calls on <code>/tokens/{tokenId}</code>, including
-                                extensions such as HP-IDM.
+                internally call Keystone's normal validation, passing along all
+                headers and query parameters. It should therefore support
+                all exsting calls on <code>/tokens/{tokenId}</code>, including
+                extensions such as HP-IDM.
             </p>
         </doc>
         <request>
@@ -111,12 +111,12 @@
         <response status="200 203">
             <representation mediaType="application/xml" element="identity:access">
           <doc>
-        <xsdxt:code href="../samples/validatetoken.xml"/>
+        <xsdxt:code href="samples/validatetoken.xml"/>
           </doc>
         </representation>
             <representation mediaType="application/json">
           <doc>
-        <xsdxt:code href="../samples/validatetoken.json"/>
+        <xsdxt:code href="samples/validatetoken.json"/>
           </doc>
         </representation>
         </response>
@@ -138,10 +138,10 @@
             <p xmlns="http://www.w3.org/1999/xhtml">
                 'X-Subject-Token' is encrypted, but can still be used for
                 caching. This extension will basically decrypt this header and
-                                internally call Keystone's normal validation, passing along all
-                                headers and query parameters. It should therefore support
-                                all exsting calls on <code>/tokens/{tokenId}</code>, including
-                                extensions such as HP-IDM.
+                internally call Keystone's normal validation, passing along all
+                headers and query parameters. It should therefore support
+                all exsting calls on <code>/tokens/{tokenId}</code>, including
+                extensions such as HP-IDM.
             </p>
             <p xmlns="http://www.w3.org/1999/xhtml">
                 No response body is returned for this method.

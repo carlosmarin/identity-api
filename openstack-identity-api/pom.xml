@@ -167,6 +167,29 @@
                     </execution>
 
                     <execution>
+                        <id>OS-KSVALIDATE</id>
+                        <goals>
+                            <goal>generate-pdf</goal>
+                            <goal>generate-webhelp</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <includes>extensions/OS-KSVALIDATE/OS-KSVALIDATE-admin-devguide.xml</includes>
+                            <trimWadlUriCount>1</trimWadlUriCount>
+                            <pdfUrl>OS-KSVALIDATE-admin-devguide.pdf</pdfUrl>
+                            <canonicalUrlBase>http://docs.rackspacecloud.com/openstack-extensions/auth/OS-KSVALIDATE/content</canonicalUrlBase>
+                            <chunkSectionDepth>0</chunkSectionDepth>
+                            <postProcess>
+                                <copy todir="target/docbkx/webhelp/extensions/OS-KSVALIDATE/OS-KSVALIDATE-admin-devguide/content/">
+                                    <fileset dir="target/docbkx/pdf/extensions/OS-KSVALIDATE">
+                                        <include name="**/OS-KSVALIDATE-admin-devguide.pdf"/>
+                                    </fileset>
+                                </copy>
+                            </postProcess>
+                        </configuration>
+                    </execution>
+                    
+                    <execution>
                         <id>OS-KSCATALOG</id>
                         <goals>
                             <goal>generate-pdf</goal>

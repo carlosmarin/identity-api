@@ -24,7 +24,7 @@
         <!-- Information about the extension -->
         <!ENTITY VERSION  "v1.0">
         <!ENTITY PUB_DATE "2011-08-26">
-        <!ENTITY ALIAS "RAX-KSGRP">
+        <!ENTITY ALIAS "OS-KSVALIDATE">
         <!ENTITY URI_REFHEAD '
         <thead xmlns="http://docbook.org/ns/docbook">
         <tr>
@@ -33,19 +33,9 @@
         <td colspan="4">Description</td>
         </tr>
         </thead>'>
-        <!ENTITY NAMESPACE "http://docs.rackspace.com/identity/api/ext/RAX-KSGRP/v1.0">
+        <!ENTITY NAMESPACE "http://docs.rackspace.com/identity/api/ext/OS-KSVALIDATE/v1.0">
         <!ENTITY CURRENTGUIDE "http://docs.rackspace.com/api">
-        <!ENTITY EXTENSIONXSD "xsd/RAX-KSGRP-groups.xsd">
-        <!ENTITY GROUPSXML "samples/RAX-KSGRP-groups.xml">
-        <!ENTITY GROUPSJSON "samples/RAX-KSGRP-groups.json">
-        <!ENTITY GROUPXML "samples/RAX-KSGRP-group.xml">
-        <!ENTITY GROUPJSON "samples/RAX-KSGRP-group.json">
 
-        <!ENTITY GROUPREQUESTXML "../../common/samples/auth_credentials.xml">
-        <!ENTITY GROUPREQUESTJSON "../../common/samples/auth_credentials.json">
-        <!ENTITY GROUPRESPONSEXML "../../common/samples/authwithgroups.xml">
-        <!ENTITY GROUPRESPONSEJSON "../../common/samples/authwithgroups.json">
-        
 ]>
 <book xmlns="http://docbook.org/ns/docbook"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -55,8 +45,8 @@
       xmlns:html="http://www.w3.org/1999/xhtml"
       version="5.0"  status="draft" xml:id="book-0001">
     <?rax subtitle.font.size="12px"?>
-    <title>Rackspace Keystone Group Extension (Service Operations)</title>
-    <titleabbrev>RAX-KSGRP (Service)</titleabbrev>
+    <title>OpenStack Identity OS-KSVALIDATE Extension (Service Operations)</title>
+    <titleabbrev>OS-KSVALIDATE (Service)</titleabbrev>
   <info>
     <author>
       <personname>
@@ -88,19 +78,21 @@
     </othercredit>
     <extension  xmlns="http://docs.openstack.org/common/api/v1.0"
                 xmlns:atom="http://www.w3.org/2005/Atom"
-                name="Rackspace Keystone Group Extensions" namespace="http://docs.rackspace.com/identity/api/ext/RAX-KSGRP/v1.0"
-                alias="RAX-KSGRP"
+                name="OS-KSVALIDATE Extensions" namespace="http://docs.rackspace.com/identity/api/ext/OS-KSVALIDATE/v1.0"
+                alias="OS-KSVALIDATE"
                 updated="2011-08-14T13:25:27-06:00">
-                <description>Rackspace extensions to Keystone v2.0 API enabling groups.</description>
+                <description>
+                            Keystone v2.0 API extension.
+                </description>
                 <atom:link rel="describedby" type="application/pdf"
-                            href="httaw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/RAX-KSGRP/RAX-KSGRP-devguide.pdf"/>
+                            href="httaw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/OS-KSVALIDATE/OS-KSVALIDATE-service-devguide.pdf"/>
                 <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" 
-                            href="https://raw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/RAX-KSGRP/RAX-KSGRP.wadl"/>
+                            href="https://raw.github.com/openstack/identity-api/master/openstack-identity-api/src/docbkx/extensions/OS-KSVALIDATE/OS-KSVALIDATE-admin.wadl"/>
     </extension>
     <abstract>
       <para>
           This document is intended for client developers interested
-          in using the Rackspace Keystone Group Extension (Service) along with the 
+          in using the OS-KSVALIDATE Extension (Service) along with the 
           Keystone - OpenStack Identity
           (<abbrev>API</abbrev>).
       </para>
@@ -123,7 +115,7 @@
   <chapter xml:id="chapter-0001">
       <title>Summary of Changes</title>
       <para>
-          Rackspace extensions to Keystone v2.0 API allows authenticate call to also return information about group memberships of the user.
+          OS-KSVALIDATE extension allows a Token to be encrypted and passed in the 'X-Subject-Token' header for validation, rather than in the URI.
       </para>
       <section xml:id="NewHeaders-0001">
           <title>New Headers</title>
@@ -144,26 +136,17 @@
       <section xml:id="NewElement0001">
           <title>New Elements</title>
           <section xml:id="RackExt-0001">
-              <title>Rackspace extensions to Keystone v2.0 API enabling groups.</title>
+              <title>OS-KSVALIDATE extension to Keystone v2.0 API</title>
               <section xml:id="New-Elements-details-0002">
                   <title>New Elements</title>
                   <para>
-                      This extension starts returning groups as a part of response when an authenticate call is made.
-                      The samples of new elements that are defined as a part of this extension are listed below.
+                      This extension allows token validation and endpoint retrieval without sending tokens in the URI.
                   </para>
-                  <example>
-                      <title>Groups Sample XML</title>
-                      <programlisting language="xml"><xi:include href="&GROUPSXML;" parse="text"></xi:include></programlisting>
-                  </example>
-                  <example>
-                      <title>Groups Sample JSON</title>
-                      <programlisting language="javascript"><xi:include href="&GROUPSJSON;" parse="text"></xi:include></programlisting>
-                  </example>
               </section>
               <section xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xml:id="Admin_API_Service_Developer_Operations-d1e1357" version="5.0" role="api-reference">
-                  <title>RAX-KSGRP Extension API Operations</title>
+                  xml:id="KSVALIDATE_OPERATIONS-token" version="5.0" role="api-reference">
+                  <title>OS-KSVALIDATE Extension API Operations</title>
 
                   <table rules="all">
                       <caption>Authentication Header</caption>
@@ -183,12 +166,16 @@
                       </tbody>
                   </table>
 
-                  <para>Following operations are the list of operations whose behavior is altered by Rackspace API Groups Service Extension:</para>
-                  <section xml:id="User_Operations_RAX_KSGRP">
-                      <title>User Operations</title>
+                  <para>Following operations are the list of operations available in the OS-KSVALIDATE Service Extension:</para>
+                  <section xml:id="OS-KSVALIDATE_OPERATIONS">
+                      <title>API operations</title>
                       <wadl:resources xmlns:wadl="http://wadl.dev.java.net/2009/02">
-                          <wadl:resource href="RAX-KSGRP.wadl#user-groups-RAX-KSGRP">
-                              <wadl:method href="listUserGroups"/>
+                          <wadl:resource href="OS-KSVALIDATE-admin.wadl#validate">
+                              <wadl:method href="validateToken"/>
+                              <wadl:method href="checkToken"/>
+                          </wadl:resource>
+                          <wadl:resource href="OS-KSVALIDATE-admin.wadl#endpointsForToken">
+                              <wadl:method href="listEndpointsForToken"/>
                           </wadl:resource>
                       </wadl:resources>
                   </section>
