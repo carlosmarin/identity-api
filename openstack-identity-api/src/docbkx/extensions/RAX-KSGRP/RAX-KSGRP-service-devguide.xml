@@ -55,7 +55,7 @@
       xmlns:html="http://www.w3.org/1999/xhtml"
       version="5.0"  status="draft" xml:id="book-0001">
     <?rax subtitle.font.size="12px"?>
-    <title>Rackspace Keystone Group Extension (Service Operations)</title>
+    <title>OpenStack Identity Rackspace Group Extension (Service Operations)</title>
     <titleabbrev>RAX-KSGRP (Service)</titleabbrev>
   <info>
     <author>

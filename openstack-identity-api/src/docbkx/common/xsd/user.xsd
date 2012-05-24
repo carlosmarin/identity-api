@@ -45,6 +45,9 @@
 
     <!-- Complex Types -->
     <complexType name="User">
+        <sequence>
+            <any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </sequence>
         <attribute name="id" type="xsd:string" use="optional">
             <annotation>
                 <xsd:documentation
