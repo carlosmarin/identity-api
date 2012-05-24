@@ -59,6 +59,7 @@
       xmlns:rax="http://docs.rackspace.com/api"
       xmlns:wadl="http://wadl.dev.java.net/2009/02"
       version="5.0">
+    <?rax subtitle.font.size="20px"?>
     <title>OpenStack Identity Rackspace Group Admin Extension</title>
     <titleabbrev>&ALIAS;</titleabbrev>
   <info>

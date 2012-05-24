@@ -4,7 +4,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:html="http://www.w3.org/1999/xhtml" version="5.0" status="draft"
     xml:id="Keystone-Developer-Guide">
-    <title>Keystone Developer Guide</title>
+    <title>OpenStack Identity Developer Guide</title>
     <info>
         <author>
             <personname>
@@ -21,7 +21,7 @@
             <holder>OpenStack</holder>
         </copyright>
         <releaseinfo>API v2.0</releaseinfo>
-        <productname>Keystone - OpenStack Identity</productname>
+        <productname>OpenStack Identity</productname>
         <pubdate>2011-08-29</pubdate>
         <legalnotice role="apache2">
             <annotation>
